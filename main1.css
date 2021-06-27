@@ -20,6 +20,9 @@ body#contactos ul li:nth-child(5) a {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
+/*boostrap*/
+.btn {background-color: #ff0066;border: none;}
+.card {margin: 40px auto;}
 /*MAIN*/
 main {
   margin-bottom: 0px;
