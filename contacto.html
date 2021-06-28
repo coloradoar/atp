@@ -57,12 +57,14 @@
                         <label for="phone">DEJANOS TU NÚMERO:</label>
                         <input type="tel" id="telefono" name="telefono">
                         <label for="Días">DÍAS</label>
-                        <input type="radio" name="Días" id="">Lunes Miércoles y Viernes<br>
-                        <input type="radio" name="Días" id="">Martes Jueves y Sábados<br>
-                        <input type="radio" name="Días" id="">Pase Libre
-                        <br>
+                        <div class="seleccion">
+                            <input type="radio" name="Días">Lunes Miércoles y Viernes<br>
+                            <input type="radio" name="Días">Martes Jueves y Sábados<br>
+                            <input type="radio" name="Días">Pase Libre
+                        </div>
                         <div class="comentario">
-                            TU COMENTARIO<br><textarea name="" id="" cols="70" rows="10"></textarea>
+                            <label for="tu comentario">TU COMENTARIO</label>
+                            <textarea name="comentario" cols="70" rows="8"></textarea>
                         </div>
                         <div class="boxBotones">
                             <input type="submit" value="Enviar" id="botonContacto">
@@ -73,22 +75,23 @@
             </div>
         </main>
         <footer class="footer">
-            <footer class="footer">
+            <div class="conteinerFooter">
                 <h3 class="horarios">25 de mayo 1256 - Formosa Capital - Horario: Lunes a Viernes de 8:00 a 21:00hs</h3>
                 <div class="redes">
                     <div class="items">
                         <a href="http://www.instagram.com/atpfitness.fsa/"><img src="imagenes/ig.png" alt="ig"
-                                width="30" px height="30px"></a>
+                                width=30px height="30px"></a>
                     </div>
                     <div class="items">
-                        <a href="http://www.facebook.com/atpfitness.fsa"><img src="imagenes/fb.png" alt="fb" width="30"
-                                px height="30px"></a>
+                        <a href="http://www.facebook.com/atpfitness.fsa"><img src="imagenes/fb.png" alt="fb" width=30px
+                                height="30px"></a>
                     </div>
-                    <div class="items" id="wsp">
-                        <img src="imagenes/wsp.png" alt="ig" width="30" px height="30px">
+                    <div class="items">
+                        <img src="imagenes/wsp.png" alt="ig" width=30px height="30px">
                     </div>
                 </div>
-            </footer>
+            </div>
+        </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
