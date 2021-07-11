@@ -3,14 +3,6 @@
   margin: 0;
   padding: 0;
 }
-/*boostrap*/
-.btn {
-  background-color: #ff0066;
-  border: none;
-}
-.card {
-  margin: 40px auto;
-}
 body {
   font-family: montserrat, sans-serif;
   background-color: whitesmoke;
@@ -129,6 +121,7 @@ body#contactos ul li:nth-child(5) a {
   width: 100%;
   height: auto;
 }
+/*SECCION PLANES INDEX*/
 .containerPlanes {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -199,8 +192,9 @@ body#contactos ul li:nth-child(5) a {
 #botonhover:hover {
   transform: scale(1.1);
 }
+/*SECCION NOSOTROS Y NUTRICION INDEX*/
 .containerSecciones {
-  max-height: 900px;
+  max-height: 1000px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -215,7 +209,13 @@ body#contactos ul li:nth-child(5) a {
   grid-column: 1/3;
   grid-row: 1/2;
 }
-#boxImgNutricion{
+.servicios {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+}
+.textServicios{text-align: justify;}
+#boxImgNutricion {
   grid-column: 1/2;
   grid-row: 2/3;
 }
@@ -223,7 +223,6 @@ body#contactos ul li:nth-child(5) a {
   font-size: 2vh;
   grid-column: 2/3;
   grid-row: 2/3;
-  text-align: justify;
 }
 #boxImgNosotros {
   grid-column: 2/3;
@@ -233,7 +232,307 @@ body#contactos ul li:nth-child(5) a {
   font-size: 2vh;
   grid-column: 1/2;
   grid-row: 2/3;
-  text-align: justify;
+}
+/*SECCIONN NOSOTROS*/
+.logo1 img {
+  animation: zoominout 1s;
+}
+@keyframes zoominout {
+  0% {
+    transform: scale(0.5, 0.5);
+  }
+  30% {
+    transform: scale(1.4, 1.4);
+  }
+  30% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+.conteinerNosotros {
+  padding: 50px 60px 60px 60px;
+  margin: 30px;
+  column-gap: 20px;
+  box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-areas:
+    "  logo       logo       logo "
+    "  logo       logo       logo "
+    "  .       articulo2  .       "
+    "articulo1 articulo2 articulo3"
+    "articulo1 articulo2 articulo3"
+    "articulo1 articulo4 articulo3"
+    ".         articulo4     .    "
+    ".         articulo4     .    ";
+}
+.circulo {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: logo;
+  height: 400px;
+  width: 400px;
+  background-color: #000000;
+  border-radius: 50%;
+}
+#boxImg {
+  animation: float 2.5s ease-in-out infinite;
+  height: auto;
+  width: 90%;
+}
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+.item {
+  border-radius: 20px;
+  padding: 30px;
+  background-color: #ffffff;
+  width: auto;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+.item img {
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+}
+.itemImg {
+  border-radius: 20px;
+  overflow: hidden;
+}
+.itemImg img:hover {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.3);
+}
+.itemTitulo {
+  margin: 10px 0;
+  font-size: 1.5vw;
+  font-weight: 800;
+  font-style: italic;
+}
+.itemSubTitulo {
+  margin-bottom: 20px;
+  font-size: 1vw;
+  font-weight: 700;
+}
+.itemParrafo {
+  font-size: 1vw;
+  text-align: left;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+#articulo1 {
+  grid-area: articulo1;
+}
+#articulo2 {
+  grid-area: articulo2;
+}
+#articulo3 {
+  grid-area: articulo3;
+}
+#articulo4 {
+  grid-area: articulo4;
+}
+/*SECCION NUTRICION*/
+.containerItemsNutricion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.itemNutricion {
+  transition: transform 0.2s;
+  margin: 20px;
+
+  padding: 20px;
+}
+.itemNutricion:hover {
+  transform: scale(1.1);
+}
+.tituloItemNutricion {
+  font-size: 1.5vw;
+  font-weight: 800;
+}
+/*SECCION PLANES*/
+.contenedor1 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  justify-items: center;
+  display: grid;
+  margin: 0px 20px;
+  box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.2);
+}
+#frase1 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+#frase2 {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+#arrow {
+  grid-column: 2/3;
+  grid-row: 4/5;
+  text-align: center;
+}
+.contenedor2 {
+  margin-top: 30px;
+  text-align: left;
+  transform: skewY(-8deg);
+  height: 200px;
+  width: 400px;
+  background-color: #ff0066;
+}
+.tituloPlanes {
+  margin-top: 30px;
+  margin-left: 20px;
+  font-size: 2em;
+  font-weight: 700;
+  color: white;
+}
+.tituloPlanes2 {
+  margin-top: 30px;
+  margin-left: 20px;
+  font-size: 2em;
+  font-weight: 700;
+  color: white;
+}
+#tituloMedidas {
+  margin-left: 20px;
+  font-size: 5em;
+  font-weight: 900;
+  color: white;
+}
+#arrow1 {
+  margin-top: 60px;
+}
+.seccion1 {
+  max-height: 1200px;
+  background-color: #000000;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  color: #1f1f1f;
+  padding: 80px 0px 60px 0px;
+  gap: 30px;
+  box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.2);
+}
+.frasePlanes {
+  margin: 20px 50px 20px 50px;
+  color: #ffffff;
+  grid-row: 1/2;
+  grid-column: 1/6;
+  font-size: 2vw;
+  font-weight: 500;
+}
+.boxPlanes {
+  margin: 0px auto;
+  height: 820px;
+  max-width: 400px;
+  color: #ffffff;
+  transition: transform 0.2s;
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ff0066;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0.3px rgba(0, 0, 0, 0.3);
+}
+.boxPlanes:hover {
+  transform: scale(1.1);
+  background-color: #ffffff;
+  color: #1f1f1f;
+}
+#basic {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+#medium {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+#premium {
+  grid-column: 4/5;
+  grid-row: 2/3;
+}
+.precio {
+  position: absolute;
+  bottom: 70px;
+  font-weight: 800;
+  font-size: 3vw;
+}
+.descripcionPlanes {
+  margin: 20px;
+  max-width: 350px;
+}
+.descripcion1 {
+  font-size: 1vw;
+  text-align: left;
+}
+.listaPlanes {
+  font-size: 1vw;
+  text-align: left;
+  display: inline-block;
+  padding: 10px;
+  margin-top: 20px;
+}
+.itemsListaPlanes {
+  padding: 0px;
+}
+.boxboton {
+  margin-top: 20px;
+  position: absolute;
+  bottom: 0px;
+}
+.boxbotones {
+  display: flex;
+}
+.boxbounce {
+  align-self: flex-end;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+.boxbounce {
+  animation-name: boxbounce1;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+}
+@keyframes boxbounce1 {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-50px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-7px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
 }
 /*SECCION DE CONTACTO*/
 .tituloHola {
@@ -247,7 +546,7 @@ form {
   text-align: left;
   color: #ffffff;
   max-width: 450px;
-  height:fit-content;
+  height: fit-content;
   margin: 20px auto;
   padding: 20px;
   background: #ff0066;
@@ -306,7 +605,9 @@ label {
   margin: 10px;
   display: block;
 }
-#comentario{margin-top: 0px;}
+#comentario {
+  margin-top: 0px;
+}
 #botonContacto {
   transition: 0.3s;
   border: none;
@@ -337,283 +638,4 @@ label {
   text-align: left;
   letter-spacing: -0.5px;
   font-size: 1em;
-}
-.contenedor1 {
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  justify-items: center;
-  display: grid;
-  height: 550px;
-  margin: 0px 20px;
-  margin-top: 30px;
-  box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.2);
-}
-#frase1 {
-  grid-column: 2/3;
-  grid-row: 2/3;
-}
-#frase2 {
-  grid-column: 2/3;
-  grid-row: 3/4;
-}
-#arrow {
-  grid-column: 2/3;
-  grid-row: 4/5;
-  text-align: center;
-}
-.contenedor2 {
-  margin-top: 30px;
-  text-align: left;
-  transform: skewY(-8deg);
-  height: 200px;
-  width: 400px;
-  background-color: #ff0066;
-}
-.tituloPlanes {
-  margin-top: 30px;
-  margin-left: 20px;
-  font-size: 2em;
-  font-weight: 700;
-  color: white;
-}
-.tituloPlanes2 {
-  margin-top: 30px;
-  margin-left: 20px;
-  font-size: 2em;
-  font-weight: 700;
-  color: white;
-}
-#tituloMedidas {
-  margin-left: 20px;
-  font-size: 5em;
-  font-weight: 900;
-  color: white;
-}
-#arrow1 {
-  margin-top: 60px;
-}
-.seccion1 {
-  padding: 40px;
-  gap: 40px;
-  background-color: #000000;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-}
-.frasePlanes {
-  margin-top: 240px;
-  margin-bottom: 20px;
-  color: #ffffff;
-  grid-row: 1/2;
-  grid-column: 1/4;
-  font-size: 2vw;
-  font-weight: 500;
-}
-.boxPlanes {
-  margin: 0px auto;
-  height: 850px;
-  max-width: 400px;
-  color: #ffffff;
-  transition: transform 0.2s;
-  position: relative;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #ff0066;
-  border-radius: 20px;
-  box-shadow: 0px 0px 10px 0.3px rgba(0, 0, 0, 0.3);
-}
-.boxPlanes:hover {
-  transform: scale(1.1);
-  background-color: #ffffff;
-  color: #1f1f1f;
-}
-#basic {
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
-#medium {
-  grid-column: 2/3;
-  grid-row: 2/3;
-}
-#premium {
-  grid-column: 3/4;
-  grid-row: 2/3;
-}
-.precio {
-  position: absolute;
-  bottom: 70px;
-  font-weight: 800;
-  font-size: 3vw;
-}
-.descripcionPlanes {
-  margin: 20px;
-  max-width: 350px;
-}
-.descripcion1 {
-  font-size: 1vw;
-  text-align: left;
-}
-.listaPlanes {
-  font-size: 1vw;
-  text-align: left;
-  display: inline-block;
-  padding: 10px;
-  margin-top: 20px;
-}
-.itemsListaPlanes {
-  padding: 0px;
-}
-.boxboton {
-  margin-top: 20px;
-  position: absolute;
-  bottom: 0px;
-}
-.boxbotones {
-  display: flex;
-}
-.conteinerNosotros {
-  padding: 50px 60px 60px 60px;
-  margin: 30px 30px 0px 30px;
-  column-gap: 20px;
-  box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.2);
-  display: grid;
-  grid-template-columns: 33.3% 33.3% 33.3%;
-  grid-template-rows: repeat(8, 1fr);
-  grid-template-areas:
-    "  logo       logo       logo "
-    "  logo       logo       logo "
-    "  .       articulo2  .       "
-    "articulo1 articulo2 articulo3"
-    "articulo1 articulo2 articulo3"
-    "articulo1 articulo4 articulo3"
-    ".         articulo4     .    "
-    ".         articulo4     .    ";
-}
-.circulo {
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-area: logo;
-  height: 400px;
-  width: 400px;
-  background-color: #000000;
-  border-radius: 50%;
-}
-#boxImg {
-  animation: float 2.5s ease-in-out infinite;
-  height: auto;
-  width: 90%;
-}
-@keyframes float {
-  0% {
-    transform: translatey(0px);
-  }
-  50% {
-    transform: translatey(-20px);
-  }
-  100% {
-    transform: translatey(0px);
-  }
-}
-.itemImg {
-  border-radius: 20px;
-  overflow: hidden;
-}
-.itemImg img:hover {
-  transition: transform 0.2s ease-in-out;
-  transform: scale(1.3);
-}
-.item {
-  border-radius: 20px;
-  padding: 30px;
-  background-color: #ffffff;
-  width: auto;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-}
-.item img {
-  border-radius: 20px;
-  width: 100%;
-  height: auto;
-}
-.itemTitulo {
-  margin: 10px 0;
-  font-size: 1.5em;
-  font-weight: 800;
-  font-style: italic;
-}
-.itemSubTitulo {
-  margin-bottom: 20px;
-  font-size: 0.9em;
-}
-.itemParrafo {
-  font-size: 0.9em;
-  text-align: left;
-  font-weight: 300;
-  margin-bottom: 20px;
-}
-#articulo1 {
-  grid-area: articulo1;
-}
-#articulo2 {
-  grid-area: articulo2;
-}
-#articulo3 {
-  grid-area: articulo3;
-}
-#articulo4 {
-  grid-area: articulo4;
-}
-.boxbounce {
-  align-self: flex-end;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  transform-origin: bottom;
-}
-.boxbounce {
-  animation-name: boxbounce1;
-  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
-}
-@keyframes boxbounce1 {
-  0% {
-    transform: scale(1, 1) translateY(0);
-  }
-  10% {
-    transform: scale(1.1, 0.9) translateY(0);
-  }
-  30% {
-    transform: scale(0.9, 1.1) translateY(-50px);
-  }
-  50% {
-    transform: scale(1.05, 0.95) translateY(0);
-  }
-  57% {
-    transform: scale(1, 1) translateY(-7px);
-  }
-  64% {
-    transform: scale(1, 1) translateY(0);
-  }
-  100% {
-    transform: scale(1, 1) translateY(0);
-  }
-}
-.logo1 img {
-  animation: zoominout 1s;
-}
-@keyframes zoominout {
-  0% {
-    transform: scale(0.5, 0.5);
-  }
-  30% {
-    transform: scale(1.4, 1.4);
-  }
-  30% {
-    transform: scale(1.2, 1.2);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
 }
