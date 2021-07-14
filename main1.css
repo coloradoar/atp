@@ -423,7 +423,7 @@ body#contactos ul li:nth-child(5) a {
   max-height: 1200px;
   background-color: #000000;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   color: #1f1f1f;
   padding: 80px 0px 60px 0px;
@@ -434,7 +434,7 @@ body#contactos ul li:nth-child(5) a {
   margin: 20px 50px 20px 50px;
   color: #ffffff;
   grid-row: 1/2;
-  grid-column: 1/6;
+  grid-column: 1/4;
   font-size: 2vw;
   font-weight: 500;
 }
@@ -458,15 +458,15 @@ body#contactos ul li:nth-child(5) a {
   color: #1f1f1f;
 }
 #basic {
-  grid-column: 2/3;
+  grid-column: 1/2;
   grid-row: 2/3;
 }
 #medium {
-  grid-column: 3/4;
+  grid-column: 2/3;
   grid-row: 2/3;
 }
 #premium {
-  grid-column: 4/5;
+  grid-column: 3/4;
   grid-row: 2/3;
 }
 .precio {

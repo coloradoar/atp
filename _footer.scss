@@ -1,0 +1,34 @@
+.footer {
+    grid-column: 1/2;
+    background-color: black;
+    color:$colortexto2;
+    height: 120px;
+    text-align: center;
+    }
+    .conteinerFooter {
+    margin-top: 30px;
+    }
+    .horarios {
+    margin: 10px auto;
+    font-size: 1vw;
+    font-weight: 400;
+    }
+    .redes {
+    margin: 5px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .items {
+    border-radius: 50%;
+    transition: 0.4s;
+    display: flex;
+    height: 45px;
+    width: 45px;
+    justify-content: center;
+    align-items: center;
+    }
+    .items:hover {
+    background-color: $colorprincipal;
+    border-radius: 50%;
+    }

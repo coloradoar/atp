@@ -1,0 +1,587 @@
+    $colorprincipal: #ff0066;
+    $sombra: #333233;
+    $colortexto: #000000;
+    $colortexto2: #ffffff;
+    $backgroundcolor1: #000000;
+    @import "menu";
+    @import "footer";
+    @mixin tituloEstilo {
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 2em;
+    font-weight: 700;
+    }
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+    body {
+    font-family: montserrat, sans-serif;
+    background-color: whitesmoke;
+    }
+    .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    }
+    .logo {
+    margin-top: 30px;
+    width: 300px;
+    height: 300px;
+    }
+    main {
+    grid-column: 1/2;
+    margin-bottom: 0px;
+    position: relative;
+    text-align: center;
+    }
+    .header {
+    grid-column: 1/2;
+    text-align: center;
+    background-color: $colorprincipal;
+    }
+    h1 {
+    color: #000000;
+    font-size: 10vw;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 18vh;
+    grid-column: 1/2;
+    text-align: center;
+    margin: 40px;
+    letter-spacing: -5px;
+    }
+    .headerSecciones {
+    padding-bottom: 20px;
+    background-color: $colorprincipal;
+    grid-column: 1/2;
+    text-align: center;
+    }
+
+    .box {
+    width: auto;
+    height: auto;
+    }
+    .box img {
+    vertical-align: top;
+    width: 100%;
+    height: auto;
+    }
+    /*SECCION PLANES INDEX*/
+    .containerPlanes {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    color: #1f1f1f;
+    padding: 80px 0px 60px 0px;
+    margin: 30px;
+    gap: 30px;
+    box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.2);
+    }
+    .boxTituloPlanes {
+    grid-column: 2/5;
+    grid-row: 1/2;
+    }
+    .tituloSeccion {
+    margin: 50px;
+    font-size: 6vw;
+    font-weight: 900;
+    text-shadow: 0px 0px 5px $sombra;
+    }
+    .plan {
+    transition: transform 0.2s;
+    border-top: 5px solid #333233;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 0px 10px 0.3px rgba(0, 0, 0, 0.3);
+    }
+    .plan:hover {
+    transform: scale(1.3);
+    color: $colortexto2;
+    background: linear-gradient(145deg, #999999, #464545);
+    }
+    #plan1 {
+    grid-column: 2/3;
+    grid-row: 2/4;
+    }
+    #plan2 {
+    grid-column: 3/4;
+    grid-row: 2/4;
+    }
+    #plan3 {
+    grid-column: 4/5;
+    grid-row: 2/4;
+    }
+    .tituloCardsPlanes {
+    font-weight: 800;
+    font-style: italic;
+    padding: 10px;
+    }
+    .descripcion {
+    height: 80px;
+    font-size: 1vw;
+    text-align: left;
+    padding: 20px;
+    }
+    .boton {
+    transition: 0.3s;
+    border: none;
+    margin: 20px;
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #af0348, $colorprincipal);
+    color: whitesmoke;
+    font-weight: 600;
+    text-transform: uppercase;
+    }
+    #botonhover:hover {
+    transform: scale(1.1);
+    }
+    /*SECCION NOSOTROS Y NUTRICION INDEX*/
+    .containerSecciones {
+    max-height: 1000px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 30px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.2);
+    }
+    .boxTituloSeccion {
+    max-height: 200px;
+    align-content: center;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    }
+    .servicios {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    }
+    .textServicios {
+    text-align: justify;
+    }
+    #boxImgNutricion {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    }
+    #nutricion {
+    font-size: 2vh;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    }
+    #boxImgNosotros {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    }
+    #nosotros {
+    font-size: 2vh;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    }
+    /*SECCIONN NOSOTROS*/
+    .logo1 img {
+    animation: zoominout 1s;
+    }
+    @keyframes zoominout {
+    0% {
+        transform: scale(0.5, 0.5);
+    }
+    30% {
+        transform: scale(1.4, 1.4);
+    }
+    30% {
+        transform: scale(1.2, 1.2);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+    }
+    .conteinerNosotros {
+    padding: 50px 60px 60px 60px;
+    margin: 30px;
+    column-gap: 20px;
+    box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas:
+        "  logo       logo       logo "
+        "  logo       logo       logo "
+        "  .       articulo2  .       "
+        "articulo1 articulo2 articulo3"
+        "articulo1 articulo2 articulo3"
+        "articulo1 articulo4 articulo3"
+        ".         articulo4     .    "
+        ".         articulo4     .    ";
+    }
+    .circulo {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: logo;
+    height: 400px;
+    width: 400px;
+    background-color: #000000;
+    border-radius: 50%;
+    }
+    #boxImg {
+    animation: float 2.5s ease-in-out infinite;
+    height: auto;
+    width: 90%;
+    }
+    @keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+    }
+    .item {
+    border-radius: 20px;
+    padding: 30px;
+    background-color: #ffffff;
+    width: auto;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    }
+    .item img {
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    }
+    .itemImg {
+    border-radius: 20px;
+    overflow: hidden;
+    }
+    .itemImg img:hover {
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.3);
+    }
+    .itemTitulo {
+    margin: 10px 0;
+    font-size: 1.5vw;
+    font-weight: 800;
+    font-style: italic;
+    }
+    .itemSubTitulo {
+    margin-bottom: 20px;
+    font-size: 1vw;
+    font-weight: 700;
+    }
+    .itemParrafo {
+    font-size: 1vw;
+    text-align: left;
+    font-weight: 300;
+    margin-bottom: 20px;
+    }
+    #articulo1 {
+    grid-area: articulo1;
+    }
+    #articulo2 {
+    grid-area: articulo2;
+    }
+    #articulo3 {
+    grid-area: articulo3;
+    }
+    #articulo4 {
+    grid-area: articulo4;
+    }
+    /*SECCION NUTRICION*/
+    .containerItemsNutricion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .itemNutricion {
+    transition: transform 0.2s;
+    margin: 20px;
+    padding: 20px;
+    }
+    .itemNutricion:hover {
+    transform: scale(1.1);
+    }
+    .tituloItemNutricion {
+    font-size: 1.5vw;
+    font-weight: 800;
+    }
+    .pregunta {
+    text-align: left;
+    font-weight: 900;
+    font-size: 5vw;
+    }
+    /*SECCION PLANES*/
+    .contenedor1 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    justify-items: center;
+    display: grid;
+    margin: 0px 20px;
+    box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.2);
+    }
+    #frase1 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    }
+    #frase2 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    }
+    #arrow {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    text-align: center;
+    }
+    .contenedor2 {
+    margin-top: 30px;
+    text-align: left;
+    transform: skewY(-8deg);
+    height: 200px;
+    width: 400px;
+    background-color: $colorprincipal;
+    }
+    .tituloPlanes {
+    @include tituloEstilo();
+    color: $colortexto2;
+    }
+    .tituloPlanes2 {
+    @include tituloEstilo();
+    color: $colortexto2;
+    }
+    #tituloMedidas {
+    margin-left: 20px;
+    font-size: 5em;
+    font-weight: 900;
+    color: $colortexto2;
+    }
+    #arrow1 {
+    margin-top: 60px;
+    }
+    .seccion1 {
+    max-height: 1200px;
+    background-color: #000000;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    color: #1f1f1f;
+    padding: 80px 0px 60px 0px;
+    gap: 30px;
+    box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.2);
+    }
+    .frasePlanes {
+    margin: 20px 50px 20px 50px;
+    color: $colortexto2;
+    grid-row: 1/2;
+    grid-column: 1/4;
+    font-size: 2vw;
+    font-weight: 500;
+    }
+    .boxPlanes {
+    margin: 0px auto;
+    height: 820px;
+    max-width: 400px;
+    color: $colortexto2;
+    transition: transform 0.2s;
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $colorprincipal;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0.3px rgba(0, 0, 0, 0.3);
+    }
+    .boxPlanes:hover {
+    transform: scale(1.1);
+    background-color: #ffffff;
+    color: #1f1f1f;
+    }
+    #basic {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    }
+    #medium {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    }
+    #premium {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    }
+    .precio {
+    position: absolute;
+    bottom: 70px;
+    font-weight: 800;
+    font-size: 3vw;
+    }
+    .descripcionPlanes {
+    margin: 20px;
+    max-width: 350px;
+    }
+    .descripcion1 {
+    font-size: 1vw;
+    text-align: left;
+    }
+    .listaPlanes {
+    font-size: 1vw;
+    text-align: left;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 20px;
+    }
+    .itemsListaPlanes {
+    padding: 0px;
+    }
+    .boxboton {
+    margin-top: 20px;
+    position: absolute;
+    bottom: 0px;
+    }
+    .boxbotones {
+    display: flex;
+    }
+    .boxbounce {
+    align-self: flex-end;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+    }
+    .boxbounce {
+    animation-name: boxbounce1;
+    animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+    }
+    @keyframes boxbounce1 {
+    0% {
+        transform: scale(1, 1) translateY(0);
+    }
+    10% {
+        transform: scale(1.1, 0.9) translateY(0);
+    }
+    30% {
+        transform: scale(0.9, 1.1) translateY(-50px);
+    }
+    50% {
+        transform: scale(1.05, 0.95) translateY(0);
+    }
+    57% {
+        transform: scale(1, 1) translateY(-7px);
+    }
+    64% {
+        transform: scale(1, 1) translateY(0);
+    }
+    100% {
+        transform: scale(1, 1) translateY(0);
+    }
+    }
+    /*SECCION DE CONTACTO*/
+    .tituloHola {
+    margin: 80px 0px 0px auto;
+    font-size: 5em;
+    font-weight: 900;
+    display: flex;
+    text-shadow: 0px 0px 5px $sombra;
+    }
+    form {
+    text-align: left;
+    color: $colortexto2;
+    max-width: 450px;
+    height: fit-content;
+    margin: 20px auto;
+    padding: 20px;
+    background: $colorprincipal;
+    border-radius: 20px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    border: 1px solid $colorprincipal;
+    height: auto;
+    outline: 0;
+    padding: 10px;
+    width: 90%;
+    background-color: #ffffff;
+    color: #1f1f1f;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07) inset;
+    }
+    input[type="text"]:focus {
+    outline: none;
+    border: 3px solid #00d9ff;
+    }
+    input[type="email"]:focus {
+    outline: none;
+    border: 3px solid #00d9ff;
+    }
+    input[type="tel"]:focus {
+    outline: none;
+    border: 3px solid #00d9ff;
+    }
+    textarea:focus {
+    outline: none;
+    border: 3px solid #00d9ff;
+    }
+    .seleccion {
+    text-align: left;
+    }
+    input[type="radio"] {
+    margin: 10px;
+    }
+    select {
+    padding: 6px;
+    height: 32px;
+    border-radius: 2px;
+    }
+    fieldset {
+    margin-bottom: 20px;
+    border: none;
+    }
+    label {
+    font-weight: 700;
+    margin: 10px;
+    display: block;
+    }
+    #comentario {
+    margin-top: 0px;
+    }
+    #botonContacto {
+    transition: 0.3s;
+    border: none;
+    margin: 10px 20px 10px 20px;
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    background: white;
+    color: $sombra;
+    font-weight: 700;
+    text-transform: uppercase;
+    }
+    #botonContacto:hover {
+    transform: scale(1.1);
+    }
+    .boxtexto {
+    text-align: left;
+    grid-column: 1/2;
+    margin: 20px 0px 20px auto;
+    }
+    .formulario {
+    text-align: center;
+    grid-column: 2/3;
+    margin: 20px auto 20px 0px;
+    }
+    .escribi p {
+    max-width: 320px;
+    text-align: left;
+    letter-spacing: -0.5px;
+    font-size: 1em;
+    }

@@ -1,0 +1,34 @@
+nav {
+    grid-column: 1/2;
+    z-index: 3;
+    position: absolute;
+    position: sticky;
+    top: 0;
+    background-color: black;
+    height: 60px;
+    width: 100%;
+    }
+    nav a:hover {
+    color: #ff0066;
+    }
+    ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    li {
+        padding: 20px;
+        a {
+            text-decoration: none;
+            color:$colortexto2;
+            }
+        }
+    }
+    body#home ul li:nth-child(1) a,
+    body#nosotros ul li:nth-child(2) a,
+    body#nutricion ul li:nth-child(3) a,
+    body#planes ul li:nth-child(4) a,
+    body#contactos ul li:nth-child(5) a {
+    color: $colorprincipal;
+    font-weight: 600;
+    }
