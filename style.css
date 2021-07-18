@@ -182,8 +182,10 @@ h1 {
 .containerPlanes {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
   color: #1f1f1f;
   padding: 80px 0px 60px 0px;
   margin: 30px;
@@ -201,7 +203,7 @@ h1 {
   grid-row: 1/2;
 }
 
-.containerPlanes .tituloSeccion {
+.tituloSeccion {
   margin: 50px;
   font-size: 6vw;
   font-weight: 900;
@@ -418,15 +420,7 @@ h1 {
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: (1fr)[8];
       grid-template-rows: repeat(8, 1fr);
-      grid-template-areas:
-      "  logo       logo       logo "
-      "  logo       logo       logo "
-      "  .       articulo2  .       "
-      "articulo1 articulo2 articulo3"
-      "articulo1 articulo2 articulo3"
-      "articulo1 articulo4 articulo3"
-      ".         articulo4     .    "
-      ".         articulo4     .    ";
+      grid-template-areas: "  logo       logo       logo " "  logo       logo       logo " "  .       articulo2  .       " "articulo1 articulo2 articulo3" "articulo1 articulo2 articulo3" "articulo1 articulo4 articulo3" ".         articulo4     .    " ".         articulo4     .    ";
 }
 
 .circulo {
