@@ -3,14 +3,18 @@
     $colortexto: #000000;
     $colortexto2: #ffffff;
     $backgroundcolor1: #000000;
+
+    @import "containerSecciones";
     @import "menu";
     @import "footer";
+
     @mixin tituloEstilo {
     margin-top: 30px;
     margin-left: 20px;
     font-size: 2em;
     font-weight: 700;
     }
+
     * {
     box-sizing: border-box;
     margin: 0;
@@ -29,16 +33,16 @@
     width: 300px;
     height: 300px;
     }
+    .header {
+    grid-column: 1/2;
+    text-align: center;
+    background-color: $colorprincipal;
+    }
     main {
     grid-column: 1/2;
     margin-bottom: 0px;
     position: relative;
     text-align: center;
-    }
-    .header {
-    grid-column: 1/2;
-    text-align: center;
-    background-color: $colorprincipal;
     }
     h1 {
     color: #000000;
@@ -60,11 +64,12 @@
     .box {
     width: auto;
     height: auto;
+
+    img {
+        vertical-align: top;
+        width: 100%;
+        height: auto;
     }
-    .box img {
-    vertical-align: top;
-    width: 100%;
-    height: auto;
     }
     /*SECCION PLANES INDEX*/
     .containerPlanes {
@@ -76,16 +81,16 @@
     margin: 30px;
     gap: 30px;
     box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.2);
-        .boxTituloPlanes {
+    .boxTituloPlanes {
         grid-column: 2/5;
         grid-row: 1/2;
-        }
+    }
     }
     .tituloSeccion {
-        margin: 50px;
-        font-size: 6vw;
-        font-weight: 900;
-        }
+    margin: 50px;
+    font-size: 6vw;
+    font-weight: 900;
+    }
     .plan {
     transition: transform 0.2s;
     border-top: 5px solid #333233;
@@ -94,6 +99,7 @@
     box-shadow: 0px 0px 10px 0.3px rgba(0, 0, 0, 0.3);
     }
     .plan:hover {
+    cursor: pointer;
     transform: scale(1.3);
     color: $colortexto2;
     background: linear-gradient(145deg, #999999, #464545);
@@ -134,19 +140,10 @@
     text-transform: uppercase;
     }
     #botonhover:hover {
+    cursor: pointer;
     transform: scale(1.1);
     }
     /*SECCION NOSOTROS Y NUTRICION INDEX*/
-    .containerSecciones {
-    max-height: 1000px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    margin: 30px;
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.2);
-    }
     .boxTituloSeccion {
     max-height: 200px;
     align-content: center;
@@ -250,19 +247,20 @@
     height: fit-content;
     display: flex;
     flex-direction: column;
+
+    img {
+        border-radius: 20px;
+        width: 100%;
+        height: auto;
     }
-    .item img {
-    border-radius: 20px;
-    width: 100%;
-    height: auto;
     }
     .itemImg {
     border-radius: 20px;
     overflow: hidden;
+    img:hover {
+        transition: transform 0.2s ease-in-out;
+        transform: scale(1.3);
     }
-    .itemImg img:hover {
-    transition: transform 0.2s ease-in-out;
-    transform: scale(1.3);
     }
     .itemTitulo {
     margin: 10px 0;
@@ -564,6 +562,7 @@
     text-transform: uppercase;
     }
     #botonContacto:hover {
+    cursor: pointer;
     transform: scale(1.1);
     }
     .boxtexto {
@@ -582,42 +581,113 @@
     letter-spacing: -0.5px;
     font-size: 1em;
     }
-    @media only screen and (max-width: 1200px){
-        .containerSecciones {
-            max-height: 750px;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            margin: 30px;
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.2);
-            }
+
+    @media only screen and (max-width: 376px) {
+    h1 {
+        color: #000000;
+        font-size: 22vw;
+        font-weight: 900;
+        font-style: italic;
+        text-align: center;
+        margin: 10px;
+        line-height: 25vw;
     }
-    @media only screen and (max-width: 376px){
-        h1 {
-            color: #000000;
-            font-size: 22vw;
-            font-weight: 900;
-            font-style: italic;
-            text-align: center;
-            margin: 10px;
-            line-height: 25vw;
-            }
-        .tituloSeccion {
-            margin: 50px;
-            font-size: 20vw;
-            font-weight: 900;
-            }
-        .descripcion {
+    .tituloSeccion {
+        margin: 50px;
+        font-size: 20vw;
+        font-weight: 900;
+    }
+    .descripcion {
         height: 80px;
         font-size: 3vw;
         text-align: left;
         padding: 20px;
-            }
-        .horarios {
+    }
+    .horarios {
         margin: 10px auto;
-        font-size: 3vw;
+        font-size: 4vw;
         font-weight: 400;
+    }
+    /*SECCION PLANES INDEX*/
+    .containerPlanes {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        color: #1f1f1f;
+        padding: 30px 0px 30px 0px;
+        margin: 30px;
+        gap: 30px;
+        box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.2);
+        .boxTituloPlanes {
+        height: 200px;
+        grid-column: 1/6;
+        grid-row: 1/2;
         }
+    }
+    .tituloSeccion {
+        font-size: 15vw;
+        font-weight: 900;
+    }
+    #plan1 {
+        grid-column: 2/5;
+        grid-row: 2/4;
+    }
+    #plan2 {
+        grid-column: 2/5;
+        grid-row: 4/6;
+    }
+    #plan3 {
+        grid-column: 2/5;
+        grid-row: 6/8;
+    }
+    .descripcion {
+        height: 80px;
+        font-size: 5vw;
+        text-align: left;
+        padding: 20px;
+    }
+
+    /*SECCION NOSOTROS Y NUTRICION INDEX*/
+    .containerSecciones {
+        max-height: 1100px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        margin: 30px;
+        padding: 30px;
+        text-align: center;
+        box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.2);
+        }
+    .boxTituloSeccion {
+        max-height: 200px;
+        align-content: center;
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+    .servicios {
+        text-align: center;
+        margin: 20px;
+        padding: 20px;
+    }
+    .textServicios {
+        text-align: justify;
+    }
+    #boxImgNutricion {
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+    #nutricion {
+        font-size: 2vh;
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+    #boxImgNosotros {
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+    #nosotros {
+        font-size: 2vh;
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
     }
