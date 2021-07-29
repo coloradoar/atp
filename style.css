@@ -1029,7 +1029,7 @@ label {
   font-size: 1em;
 }
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 576px) {
   h1 {
     color: #000000;
     font-size: 22vw;
