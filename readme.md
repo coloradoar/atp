@@ -1,5 +1,5 @@
 ATP NUTRICION & FITNESS
-Atp es un gimnacio nuevo que propone una nueva forma de entrenar y de como se relacionan los clientes con el gimnacio, lo que se busca es algo moderno y de alto impacto que invite a la gente a sumarse.
+Atp es un gimnasio nuevo que propone una nueva forma de entrenar y de como se relacionan los clientes con el gimnacio, lo que se busca es algo moderno y de alto impacto que invite a la gente a sumarse.
 
 Construido con 🛠️
 HTML,CSS,SCSS
